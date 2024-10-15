@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Patti</title>
+    <link rel="stylesheet" href="pets.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="border rounded-lg shadow-xl bg-white p-2"> 
+    <a id="restart" class="btn rounded-xl font-bold text-lg bg-black text-white"> Restart</a>
+    <h1 class="text-center font-bold text-4xl mb-5">Teen Patti</h1>
+    <main class="border border-black rounded-xl shadow-xl bg-white item-center grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-4 flex p-2">
+        <section id="faisal" class="border rounded-lg shadow-lg px-6 py-3 mx-auto mt-5 mb-5">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow py-4" placeholder="Faisal">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="add-money1" type="text" class="grow" placeholder="Add Number">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="show-add-money1" type="text" class="grow" placeholder="00" readonly>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="expenses1" type="text" class="grow" value="Total:1000" readonly>
+            </label>
+        </section>
+        <section id="rifat" class="border rounded-lg shadow-lg px-6 py-3 mx-auto mt-5 mb-5">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow py-4" placeholder="Haider">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="add-money2" type="text" class="grow" placeholder="Add Number">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="show-add-money2" type="text" class="grow" placeholder="00" readonly>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="expenses2" type="text" class="grow" value="Total:1000" readonly>
+            </label>
+        </section>
+        <section id="haider" class="border rounded-lg shadow-lg px-6 py-3 mx-auto mt-5 mb-5">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow py-4" placeholder="Username">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="add-money3" type="text" class="grow" placeholder="Add Number">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="show-add-money3" type="text" class="grow" placeholder="00" readonly>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="expenses3" type="text" class="grow" value="Total:1000" readonly>
+            </label>
+        </section>
+        <section id="shanto" class="border rounded-lg shadow-lg px-6 py-3 mx-auto mt-5 mb-5">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow py-4" placeholder="Username">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="add-money4" type="text" class="grow" placeholder="Add Number">
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="show-add-money4" type="text" class="grow" placeholder="00" readonly>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input id="expenses4" type="text" class="grow" value="Total:1000" readonly>
+            </label>
+        </section>
+    </main>
+    <script src="pets.js"></script>
+</body>
+</html>

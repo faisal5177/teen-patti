@@ -1,0 +1,36 @@
+#input-add-money {
+  padding: 10px;
+}
+
+.btn {
+  background-color: #B4F461;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.content {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
