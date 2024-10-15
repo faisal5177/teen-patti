@@ -17,11 +17,29 @@ function updateValues(sectionId) {
             // Save to local storage
             localStorage.setItem(`add-money${sectionId}`, newAddMoneyValue);
             localStorage.setItem(`expenses${sectionId}`, expenses.value);
+
+            // Display the time and amount in a card format
+            displayCard(sectionId, addMoneyValue);
         }
 
         addMoneyInput.value = ''; // Clear input after adding
         calculateTotal();
     }
+}
+
+function displayCard(sectionId, amount) {
+    const cardsContainer = document.getElementById('cards-container');
+    const currentTime = new Date().toLocaleTimeString();
+
+    const card = document.createElement('div');
+    card.className = 'card bg-gray-100 p-4 rounded-lg shadow-md';
+    card.innerHTML = `
+        <h4 class="font-bold text-lg">ID: ${sectionId}</h4>
+        <p>Time: ${currentTime}</p>
+        <p>Amount: $${amount.toFixed(2)}</p>
+    `;
+
+    cardsContainer.appendChild(card);
 }
 
 function calculateTotal() {
@@ -52,7 +70,6 @@ function loadValues() {
     calculateTotal();
 }
 
-// Add event listeners to update values when inputs change or Enter key is pressed
 function addEventListeners(sectionId) {
     const addMoneyInput = document.getElementById(`add-money${sectionId}`);
     if (addMoneyInput) {
@@ -72,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addEventListeners(4);
 });
 
-// Clear local storage and reset values
 document.getElementById('restart').addEventListener('click', () => {
     for (let i = 1; i <= 4; i++) {
         localStorage.setItem(`add-money${i}`, '0');
@@ -87,8 +103,5 @@ document.getElementById('restart').addEventListener('click', () => {
             expenses.value = 'Total:1000';
         }
     }
-    const totalAddMoney = document.getElementById('total-add-money');
-    if (totalAddMoney) {
-        totalAddMoney.value = '0.00';
-    }
+    document.getElementById('cards-container').innerHTML = ''; // Clear all cards
 });
