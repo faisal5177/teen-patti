@@ -18,23 +18,24 @@ function updateValues(sectionId) {
             localStorage.setItem(`add-money${sectionId}`, newAddMoneyValue);
             localStorage.setItem(`expenses${sectionId}`, expenses.value);
 
-            // Display the time and amount in a card format
+            // Display the date, time, and amount in a card format
             displayCard(sectionId, addMoneyValue);
         }
 
-        addMoneyInput.value = ''; // Clear input after adding
-        calculateTotal();
+        addMoneyInput.value = '';
     }
 }
 
 function displayCard(sectionId, amount) {
     const cardsContainer = document.getElementById('cards-container');
     const currentTime = new Date().toLocaleTimeString();
+    const currentDate = new Date().toLocaleDateString();
 
     const card = document.createElement('div');
     card.className = 'card bg-gray-100 p-4 rounded-lg shadow-md';
     card.innerHTML = `
         <h4 class="font-bold text-lg">ID: ${sectionId}</h4>
+        <p>Date: ${currentDate}</p>
         <p>Time: ${currentTime}</p>
         <p>Amount: $${amount.toFixed(2)}</p>
     `;
@@ -103,5 +104,5 @@ document.getElementById('restart').addEventListener('click', () => {
             expenses.value = 'Total:1000';
         }
     }
-    document.getElementById('cards-container').innerHTML = ''; // Clear all cards
+    document.getElementById('cards-container').innerHTML = '';
 });
